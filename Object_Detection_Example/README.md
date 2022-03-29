@@ -29,10 +29,11 @@ If successful, it returns a message similar to this one:\
 Once completed, your model repository should look something like this:\
 <img src="https://github.com/JustinBurg/triton_server/blob/main/Object_Detection_Example/densenet_model_repository_layout.png" width="600">
 
-
+**Initialize the Triton Inference Server**\
 Start the Triton Inference Server that is pointing to the model_repository that contains your densenet model and config file:\
 `docker run --gpus=1 --rm -p8000:8000 -p8001:8001 -p8002:8002 -v $PWD/model_repository:/models nvcr.io/nvidia/tritonserver:22.01-py3 tritonserver --model-repository=/models`
 
+**Perform inference using the Triton Server Client**\
 On your local machine or on the same instance as your Triton Server, open another terminal and pull the client container:\
 `docker pull nvcr.io/nvidia/tritonserver:22.01-py3-sdk`
 
