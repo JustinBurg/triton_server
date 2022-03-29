@@ -41,3 +41,9 @@ ON EC2 Instance with a GPU\
 or\
 On local machine\
 `docker run -it --rm --net=host nvcr.io/nvidia/tritonserver:22.01-py3-sdk`
+
+In the container, you can run inference using the Python binding with the following:\
+/workspace/install/bin/image_client -u 54.147.254.227:8000 -m densenet_onnx -c 3 -s INCEPTION /workspace/images/mug.j
+pg
+
+Refer to https://github.com/triton-inference-server/client#image-classification-example for the flags for specific command structure.
