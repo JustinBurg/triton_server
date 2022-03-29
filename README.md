@@ -12,7 +12,7 @@
 
 ## Using Triton
 Before Triton can be used, it requires that the model be saved in specific directory structure:\
-![file_structure](triton_model_repository_layout.png)
+<img src="https://github.com/JustinBurg/triton_server/blob/main/triton_model_repository_layout.png" width="48">
 
 Once the model has been saved in the model respository, you can start the Triton Server container:\
 `docker run --gpus=1 --rm -p8000:8000 -p8001:8001 -p8002:8002 -v $PWD/model_repository:/models nvcr.io/nvidia/tritonserver:22.01-py3 tritonserver --model-repository=/models`
