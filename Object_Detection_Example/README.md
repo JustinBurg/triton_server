@@ -26,8 +26,8 @@ D. To download a list of over 1,000 labels that the DenseNet model is trained to
 If successful, it returns a message similar to this one:\
 `2020-12-18 20:33:10 (78.0 MB/s) - ‘model_repository/densenet_onnx/densenet_labels.txt’ saved [10311/10311]`
 
-Once completed, your model repository should look something like this:
-<img src="https://github.com/JustinBurg/triton_server/blob/main/Object_Detection_Example/densenet_model_repository_layout.png" width="300">
+Once completed, your model repository should look something like this:\
+<img src="https://github.com/JustinBurg/triton_server/blob/main/Object_Detection_Example/densenet_model_repository_layout.png" width="600">
 
 
 Start the Triton Inference Server that is pointing to the model_repository that contains your densenet model and config file:\
