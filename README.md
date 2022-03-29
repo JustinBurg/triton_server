@@ -11,5 +11,5 @@
 `docker pull nvcr.io/nvidia/tritonserver:22.01-py3-sdk`\
 
 ## Using Triton
-Before Triton can be used, it requires that the model be saved in specific directory structure:
-![file_structure](https://raw.github.com/JustinBurg/triton_server/blob/main/triton_model_repository_layout.png)
+Before Triton can be used, it requires that the model be saved in specific directory structure:\
+![file_structure](triton_model_repository_layout.png)
