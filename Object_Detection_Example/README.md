@@ -5,8 +5,10 @@ To create the object detection inference service, you need a pretrained model fo
 Download the Dense Convolutional Network (DenseNet) model, based on an ONNX Runtime backend.\
 ONNX Runtime has the capability to train existing models through its optimized backend.
 
+This assumes that this is running on an GPU EC2 Instance on AWS and python and pip are installed.
+
 To set up your object detection service, do the following:\
-A. Create a repository structure compatible with the Triton container you subscribed to in Step 1. To do this, in the EC2 instance’s terminal window, run the following command:\
+A. Create a repository structure compatible with the Triton container. To do this, in the EC2 instance’s terminal window, run the following command:\
 `mkdir -p model_repository/densenet_onnx/1`
 
 B. To download the DenseNet model, run the following command:\
