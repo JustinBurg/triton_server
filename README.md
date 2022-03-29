@@ -3,13 +3,13 @@
 ### Install the Triton Server Container:
 `docker pull nvcr.io/nvidia/tritonserver:22.01-py3`
 
-### Install the Triton Server Client"
+### Install the Triton Server Client:
 `pip3 install nvidia-pyindex`\
 with\
 `pip3 install tritonclient[all]`\
   or\
 `pip3 install tritonclient[http]`\
-  or\
+  or install the image from NGC\
 `docker pull nvcr.io/nvidia/tritonserver:22.01-py3-sdk`
 
 ## Using Triton
