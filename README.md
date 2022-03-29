@@ -36,4 +36,4 @@ and import the library:\
 `import tritonclient.http as triton_http`
 
 To run as a container:\
-`docker run -it --rm --net=host nvcr.io/nvidia/tritonserver:22.01-py3-sdk`
+` sudo docker run --gpus all --ipc=host --ulimit memlock=-1 --ulimit stack=67108864 -it --rm --net=host nvcr.io/nvidia/tritonserver:22.01-py3-sdk`
