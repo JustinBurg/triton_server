@@ -1,6 +1,6 @@
 # Deploying an object detection model with Nvidia Triton Inference Server
 
-**Download a pretrained model and create an object detection service**
+**Download a pretrained model and create an object detection service**\
 To create the object detection inference service, you need a pretrained model for object detection.\
 Download the Dense Convolutional Network (DenseNet) model, based on an ONNX Runtime backend.\
 ONNX Runtime has the capability to train existing models through its optimized backend.
@@ -23,4 +23,19 @@ D. To download a list of over 1,000 labels that the DenseNet model is trained to
 `wget -O model_repository/densenet_onnx/densenet_labels.txt https://raw.githubusercontent.com/triton-inference-server/server/master/docs/examples/model_repository/densenet_onnx/densenet_labels.txt`\
 If successful, it returns a message similar to this one:\
 `2020-12-18 20:33:10 (78.0 MB/s) - ‘model_repository/densenet_onnx/densenet_labels.txt’ saved [10311/10311]`\
+
+Start the Triton Inference Server that is pointing to the model_repository that contains your densenet model and config file:\
+`docker run --gpus=1 --rm -p8000:8000 -p8001:8001 -p8002:8002 -v $PWD/model_repository:/models nvcr.io/nvidia/tritonserver:22.01-py3 tritonserver --model-repository=/models`
+
+On your local machine or on the same instance as your Triton Server, open another terminal and pull the client container:\
+`docker pull nvcr.io/nvidia/tritonserver:22.01-py3-sdk`
+
+The client container contains an example image that we can use for inference. 
+
+To start the client container:\
+`docker run -it --rm --net=host nvcr.io/nvidia/tritonserver:22.01-py3-sdk`
+
+In the container, you can run inference using the Python binding with the following:\
+`/workspace/install/bin/image_client -u 54.147.254.227:8000 -m densenet_onnx -c 3 -s INCEPTION /workspace/images/mug.jpg`
+
 
