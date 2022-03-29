@@ -42,9 +42,9 @@ Where:\
 `54.147.254.227:8000` is the location of the Triton Inference Server accepting HTTP requests\
 `-m densenet_onnx` is the model in the model_repository that the Triton Inference Server is mapped to\
 `-c 3` is the number of classifications we want inferred and recieve as output, ie:\
-        `0.754130 (505) = COFFEE MUG`\
-        `0.157077 (969) = CUP`\
-        `0.002880 (968) = ESPRESSO`\
+        - `0.754130 (505) = COFFEE MUG`\
+        - `0.157077 (969) = CUP`\
+        - `0.002880 (968) = ESPRESSO`\
 `/workspace/images/mug.jpg` is the location of the image being inferenced upon
 
 
