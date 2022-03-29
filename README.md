@@ -26,5 +26,8 @@ You can run the Triton Server client either as a container or embeded in your co
 
 To run in your code, install the client via pip:\
 `pip3 install tritonclient[http]`\
-and import the library:
+and import the library:\
 `import tritonclient.http as triton_http`
+
+To run as a container:\
+`docker run -it --rm --net=host nvcr.io/nvidia/tritonserver:22.01-py3-sdk`
