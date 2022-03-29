@@ -35,7 +35,7 @@ To run in your code, install the client via pip:\
 and import the library:\
 `import tritonclient.http as triton_http`
 
-To run as a container:\
+**To run as a container:**\
 ON EC2 Instance with a GPU\
 ` sudo docker run --gpus all --ipc=host --ulimit memlock=-1 --ulimit stack=67108864 -it --rm --net=host nvcr.io/nvidia/tritonserver:22.01-py3-sdk`\
 or\
