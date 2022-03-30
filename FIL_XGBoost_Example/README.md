@@ -12,3 +12,5 @@ On the GPU EC2 instance, created a folder called `model_repository`.  This will 
 `ubuntu@ip-10-0-1-122:~/model_repository$ ls`\
 `densenet_onnx  fil`
 
+Follow the instructions in the notebook on when and how to start the Triton Inference Server container.  This is the command:\
+$ sudo docker run --gpus=1 --rm -p8000:8000 -p8001:8001 -p8002:8002 -v $PWD/model_repository:/models nvcr.io/nvidia/tritonserver:22.01-py3 tritonserver --model-repository=/models
