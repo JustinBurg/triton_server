@@ -44,12 +44,12 @@ To start the client container:\
 
 In the container, you can run inference using the Python binding with the following:
 
-`/workspace/install/bin/image_client -u 54.147.254.227:8000 -m densenet_onnx -c 3 -s INCEPTION /workspace/images/mug.jpg`
+`/workspace/install/bin/image_client -u <ip_address>:8000 -m densenet_onnx -c 3 -s INCEPTION /workspace/images/mug.jpg`
 
 Where:\
 `/workspace/install/bin/image_client` is the Python version of the image classification client that came with the client image
 
-`54.147.254.227:8000` is the location of the Triton Inference Server accepting HTTP requests
+`<ip_address>:8000` is the location of the Triton Inference Server accepting HTTP requests
 
 `-m densenet_onnx` is the model in the model_repository that the Triton Inference Server is mapped to
 
