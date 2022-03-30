@@ -5,7 +5,7 @@ The full notebook explains how one can deploy XGBoost model in Triton, check dep
 https://github.com/triton-inference-server/fil_backend/blob/main/notebooks/simple-xgboost/simple_xgboost_example.ipynb
 
 On the GPU EC2 instance, created a folder calledd `model_repository`.  This will be the directory structure that contains your models:\
-`ubuntu@ip-10-0-1-122:~$ cd model_repository/ \
-`ubuntu@ip-10-0-1-122:~/model_repository$ ls \
+`ubuntu@ip-10-0-1-122:~$ cd model_repository/`\
+`ubuntu@ip-10-0-1-122:~/model_repository$ ls`\
 `densenet_onnx  fil`
 
