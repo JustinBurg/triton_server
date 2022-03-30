@@ -37,7 +37,7 @@ Start the Triton Inference Server that is pointing to the model_repository that 
 On your local machine or on the same instance as your Triton Server, open another terminal and pull the client container:\
 `docker pull nvcr.io/nvidia/tritonserver:22.01-py3-sdk`
 
-The client container contains an example image that we can use for inference. 
+The client container contains an example image, a coffee mug, that we can use for inference. 
 
 To start the client container:\
 `docker run -it --rm --net=host nvcr.io/nvidia/tritonserver:22.01-py3-sdk`
