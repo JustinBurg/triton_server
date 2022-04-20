@@ -35,7 +35,11 @@ To run in your code, install the client via pip:\
 and import the library:\
 `import tritonclient.http as triton_http`
 
-**To run as a container:**\
+**To run the jupyter notebook for the FIL example**
+Start the Triton server in one terminal window.  Then, open another and start jupyter lab on your ec2 instance and run through the cells.\
+`jupyter lab`
+
+**To run as a container for the DenseNet Example:**\
 ON EC2 Instance with a GPU\
 ` sudo docker run --gpus all --ipc=host --ulimit memlock=-1 --ulimit stack=67108864 -it --rm --net=host nvcr.io/nvidia/tritonserver:22.01-py3-sdk`\
 or\
